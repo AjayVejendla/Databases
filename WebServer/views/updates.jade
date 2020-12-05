@@ -1,0 +1,12 @@
+html
+  head
+    title= "Enter Custom Query"
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    form(action = "/")
+      input(type="submit" value = "Back to Index")
+    h1 Enter Query Here:
+    form(id = "queryForm")
+      input(type="text" value = "Enter Query" id = "query")
+      input(type="submit" value = "GO")
+    script(src = "/javascripts/query.js")

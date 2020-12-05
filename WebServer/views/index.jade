@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1 BarBeerDrinker Project Navigation
+  h2 View Drinkers Page
+  form(action="/drinker")
+
+    input(type="submit" value = "Go to Drinkers Page")
+  h2 Enter beer name to view graphs about that beer
+  form(action="/beer")
+    input(type="submit" value = "Go to Beers page")
+  h2 Enter bar name to view graphs about that bar
+  form(action="/bar")
+    input(type="submit" value = "Go to Bars page")
+  h2 Enter custom queries
+  form(action="/updates")
+    input(type="submit" value = "Enter your own queries")
+

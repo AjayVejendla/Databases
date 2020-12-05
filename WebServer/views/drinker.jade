@@ -1,0 +1,48 @@
+doctype html
+html
+  head
+    title= "Drinker Graphs"
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src = "/dist/Chart.bundle.min.js")
+  body
+    form(action = "/")
+      input(type="submit" value = "Back to Index")
+    h1 Drinker Name
+    form(id = "updateDrinker")
+      input(type="text" value = "Enter Drinker Name" id = "drinker")
+      input(type="submit" value = "GO")
+
+    h1 Total Spending Per Bar, Grouped By Days
+    div(style="position: relative; height:50vh; width:70vw")
+     
+      canvas(id = 'spendingDays')
+
+    h1 Total Spending Per Bar, Grouped By Months
+    div(style="position: relative; height:50vh; width:70vw")
+      
+      canvas(id = 'spendingMonths')
+
+    h1 Top Ten Beers Ordered By Drinker
+    div(style="position: relative; height:50vh; width:70vw")
+      canvas(id = 'beers')
+    div 
+    h1 List of Transactions
+    table(id = "transactions")
+      thead
+      tr
+        th Bill ID
+        th Bar
+        th Date
+        th Day
+        th Time
+        th Items Price
+        th Tax Price
+        th Tip
+        th Total Price
+        th Bartender
+        th Quantity
+        th Item
+        th Type
+        th Price
+      tbody(id = "transactionsBody")
+    script(src = "/javascripts/chartDrinkers.js")

@@ -1,0 +1,36 @@
+html
+    head
+        title= "Beer Graphs"
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        script(src = "/dist/Chart.bundle.min.js")
+    body
+        form(action = "/")
+            input(type="submit" value = "Back to Index")
+        h1 Select a Bar
+        label(for="Bars") Select a bar
+        form(id = "barDropdown")
+            select(name="bars" id = "bar")
+                each bar, i in bars
+                    option(value=bar) #{bar}
+            input(type="submit" value = "go")
+        h1 Top 10 Spenders
+        div(style="position: relative; height:50vh; width:70vw")
+            canvas(id = 'topSpenders')
+
+        h1 Top 10 Beers
+        div(style="position: relative; height:50vh; width:70vw")
+            canvas(id = 'topBeers')
+
+        h1 Top 5 Manfacturers
+        div(style="position: relative; height:50vh; width:70vw")
+            canvas(id = 'topManf')
+
+        h1 Number of transactions by day
+        div(style="position: relative; height:50vh; width:70vw")
+            canvas(id = 'days')
+
+        h1 Number of transactions by hour
+        div(style="position: relative; height:50vh; width:70vw")
+            canvas(id = 'hours')
+    
+    script(src = "/javascripts/chartBar.js")
